@@ -166,6 +166,7 @@ section.hero {
   padding: 1em 0.5em 6em 0.5em;
   text-align: center;
   margin-bottom: 2em;
+  height: 90vh;
 }
 
 section.hero h1 {
@@ -602,9 +603,6 @@ footer form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 footer form div {
@@ -656,14 +654,14 @@ footer form article {
 
 footer form input {
   width: 90vw;
-  height: 3em;
+  height: 2em;
   background: #ffffff;
   border-radius: 20px;
   border: none;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   color: #002e5d;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 0.5em 1em;
 }
 
@@ -694,7 +692,7 @@ footer form textarea {
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   width: 90vw;
   resize: none;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 0.5em 1em;
 }
 
@@ -774,25 +772,25 @@ footer section.pie p a:hover {
 ::-webkit-input-placeholder {
   color: #909090;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 :-ms-input-placeholder {
   color: #909090;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 ::-ms-input-placeholder {
   color: #909090;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 ::placeholder {
   color: #909090;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -1184,9 +1182,11 @@ footer section.pie p a:hover {
   }
   footer form input.send {
     width: 21.5em;
+    height: 3em;
   }
   footer form textarea {
     width: 21.5em;
+    height: 10em;
   }
   footer section.pie {
     margin-top: 1em;
