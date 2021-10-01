@@ -1,0 +1,54 @@
+div.encabezado
+    height: 1.25rem
+
+header   
+    background-color: $cl-white
+    border-radius: 15em
+    margin: 0rem 3em
+    position: sticky
+    top: 0em
+    box-shadow: 0 0 5px 2px $sw-gray
+    z-index: 10
+    padding: 0.3em 0em
+    nav
+        align-items: center
+        display: flex
+        justify-content: space-between
+        padding: 0.2rem 2rem
+        text-align: center
+        img
+            height: 3em
+        ul
+            list-style: none
+            display: flex
+            align-items: center
+            gap: 1.5em
+            font-size: $font-rg
+            font-weight: 500
+            justify-content: space-between
+            margin-right: 1.5em
+            i.fa-bars
+                display: none
+            li:hover
+                cursor: pointer
+            li.login
+                box-shadow: 0 2px 2px 1px $sw-gray
+                border-radius: 15em
+                width: 10vw
+                padding: 0.2em 0em
+                &:hover
+                    background: $cl-violet
+                    a
+                        color: $cl-white
+                a
+                    color: $cl-violet
+            li.register
+                background: $cl-light-blue
+                box-shadow: 0 2px 2px 1px $sw-gray
+                border-radius: 15em
+                width: 10vw
+                padding: 0.2em 0em
+                &:hover
+                    background: $cl-strong-blue
+                a
+                    color: $cl-white

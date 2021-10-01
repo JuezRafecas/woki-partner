@@ -1,0 +1,71 @@
+section.resto-partners
+    padding: 2em 0em 0em 0em
+    text-align: center
+    h2
+        color: $cl-light-blue
+        font-size: $font-big
+    div
+        padding: 1em 0em
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 0.7em
+        i
+            font-size: $font-big
+        div
+            display: flex
+            justify-content: center
+            text-align: center
+            align-items: center
+            article
+                padding: 2em 0em
+                display: flex
+                flex-direction: column
+                gap: 1em
+                border-radius: 1em
+                box-shadow: 0 0 5px 2px $sw-gray
+                width: 80vw
+                height: 350px
+                max-width: 300px
+                align-items: center
+                position: relative
+                img
+                    height: 150px
+                    width: 150px
+                div
+                    display: flex
+                    flex-direction: column
+                    gap: 1em
+                    position: absolute
+                    bottom: 0.5em
+                    p
+                        font-size: 1.2em
+                    h5
+                        color: $cl-light-blue
+                        font-size: $font-sbig
+                &.partner2,
+                &.partner3
+                    display: none
+section.sumartePartner
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1em
+    div
+        height: 0.3em
+        width: 100%
+        border-radius: 15em
+        background: $cl-gray
+    a
+        text-align: center
+        font-size: $font-sbig - 0.2em
+        color: $cl-violet
+        border-radius: 15em
+        box-shadow: 0 0 5px 2px $sw-gray
+        padding: 0.5em 1em
+        min-width: 10em
+        strong
+            font-weight: 400
+        &:hover
+            color: $cl-white
+            background: $cl-violet

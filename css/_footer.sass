@@ -1,0 +1,107 @@
+footer
+    margin: 0.5em
+    border-radius: 1em
+    padding: 1em 0em
+    background: linear-gradient(180deg, rgba(18,182,255,1) 0%, rgba(0,118,255,1) 100%)
+    form
+        color: $cl-white
+        text-align: center
+        display: flex
+        flex-direction: column
+        gap: 1em
+        align-items: center
+        justify-content: center
+        div
+            display: flex
+            flex-direction: column
+            gap: 0.5em
+            h2
+                font-size: $font-big
+            p
+                font-size: $font-rg
+        div.pasos
+                display: flex
+                flex-direction: column
+                gap: 1em
+        article
+            display: flex
+            flex-direction: column
+            gap: 1em
+            align-items: center
+            justify-content: center
+        input
+            width: 90vw
+            height: 3em
+            background: $cl-white
+            border-radius: 20px
+            border: none
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            color: $cl-strong-blue
+            font-size: 1.5em
+            padding: 0.5em 1em
+            &:focus
+                border: 1px solid $cl-strong-blue
+                box-shadow: $cl-strong-blue 0px 2px 4px;
+            &.send
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+                color: $cl-light-blue
+                font-weight: 600
+                &:hover
+                    background: $cl-strong-blue
+                    color: $cl-white
+                    cursor: pointer
+        textarea
+            background: $cl-white
+            border-radius: 20px
+            border: none
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
+            width: 90vw
+            resize: none
+            font-size: 1.5em
+            padding: 0.5em 1em
+    section.pie
+        display: flex
+        flex-direction: column
+        margin-top: 3em
+        gap: 1em
+        align-items: left
+        justify-content: center
+        a
+            align-self: center
+            img
+                width: 90vw
+                max-width: 300px
+        dl
+            color: $cl-white
+            font-size: $font-big
+            font-weight: 700
+            margin-left: 1rem
+            dt
+                font-weight: 600
+                font-size: 1.5rem
+            dd
+                font-size: 1.5rem
+                a
+                    color: $cl-white
+                    font-weight: 300
+                    text-decoration: none
+                    &:focus,
+                    &:hover,
+                    &:active,
+                    &:visited
+                        text-decoration: none
+                    &:hover
+                        color: $cl-black
+        p
+            margin-left: 1em
+            a
+                color: $cl-white
+                font-size: 1.5rem
+                font-weight: 700
+                &:hover
+                    color: $cl-black
+        
+::placeholder
+    color: #909090	
+    font-weight: 500
+    font-size: 1.5rem

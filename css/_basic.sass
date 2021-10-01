@@ -1,0 +1,46 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
+
+::-webkit-scrollbar 
+    width: 10px;
+
+/* Track */
+::-webkit-scrollbar-track 
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+ 
+/* Handle */
+::-webkit-scrollbar-thumb 
+    background: $cl-strong-blue; 
+    border-radius: 10px;
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+    background: $cl-black; 
+a
+    &:link,
+    &:visited,
+    &:hover,
+    &:active 
+        text-decoration: none
+        color: $cl-light-blue
+    &:hover
+        color: $cl-black
+    &:focus 
+        outline: none;
+main
+    margin: 0.5em
+    background: $cl-white
+
+div.capaInicial
+    background: #12B6FF
+div.capaSuperior
+    background: $cl-white
+div.mainFooter
+    height: 3rem
+    background: $cl-white
+    border-radius: 0 0 15em 0
+    display: none

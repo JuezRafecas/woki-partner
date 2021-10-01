@@ -1,0 +1,269 @@
+//Medias para el header con max-width
+@media screen and (max-width: 900px)
+    header
+        nav
+            flex-direction: column
+            gap: 1em
+            ul
+                justify-content: space-between
+                li
+                    &.login,
+                    &.register
+                        width: 15vw
+//Medias para el header con max-width
+@media screen and (max-width: 700px)
+    header
+        padding: 0
+        margin: auto 0.2em
+        border-radius: 1em
+        nav
+            flex-direction: row
+            justify-content: space-between
+            padding: 0.5em
+            ul
+                i.fa-bars
+                    display: inline-block
+                    font-weight: 900
+                    font-size: $font-big
+                    color: $cl-light-blue
+                li
+                    display: none
+//Medias para el header con max-width
+@media screen and (max-width: 320px)
+    section.hero
+        a
+            font-size: $font-rg
+
+@media screen and (min-width: 350px)
+    section.containerFuncionalidades
+        div.logoFuncionalidad
+            h2
+                font-size: $font-ebig
+
+@media screen and (min-width: 700px)
+    section.resto-partners
+        div
+            justify-content: space-between
+            div
+                justify-content: space-between
+                gap: 5em
+                article
+                    border-radius: 3em
+                article.partner2
+                    display: inline-block
+    section.sumartePartner
+        flex-direction: row
+        gap: 5em
+        a
+            min-width: 15em
+    section.contrata-woki
+        flex-direction: row
+        align-items: center
+        justify-content: space-around
+        text-align: left
+        div.contrata-titulo
+            display: none
+        div.contrata-texto
+            h4
+                display: block
+                font-size: $font-big
+            h3
+                display: block
+                font-size: $font-ebig
+            h5
+                font-size: 1.3em
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 1em
+            div
+                flex-direction: row
+                img
+                    width: 150px
+@media screen and (min-width: 1000px)
+    div.mainFooter
+        display: block
+    section.hero
+        background-image: url(../img/hero-background-cpu.svg)
+        background-position: 35% 65%
+        background-size: cover
+        display: grid;
+        grid-template-columns: repeat(11, 1fr) 
+        grid-template-rows: repeat(11, 1fr)
+        grid-template-areas: ". . . . . . . . . . ." ". titulo titulo titulo titulo . woki woki woki woki woki" ". titulo titulo titulo titulo . woki woki woki woki woki" ". . . . . . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". . . . . . woki woki woki woki woki" ". asesor asesor asesor asesor . woki woki woki woki woki" ". . . . . . . . . . ." ". . . . . . . . . . ."  
+        h1
+            font-size: $font-big + 0.5em
+            text-align: left
+            grid-area: titulo
+        img
+            grid-area: woki
+            align-self: center
+            justify-self: center
+        p
+            text-align: left
+            grid-area: parrafo
+        a
+            align-self: center
+            width: 15em
+            grid-area: asesor
+    main
+        margin: 0vh 5vw
+        section.containerFuncionalidades
+            div.logoFuncionalidad
+                position: relative
+                top: 1.8em
+                img
+                    position: relative
+                    left: -2vw
+                h2
+                    font-size: 4em
+            article
+                border-radius: 3em
+                padding: 0em 2em
+                h3
+                    font-size: $font-big
+                    grid-area: wokiTitulo
+                    text-align: left
+                p
+                    grid-area: wokiParagraph
+                    font-size: 1.2em
+                img
+                    width: 40vw
+                    grid-area: wokiImg
+                &.first
+                    display: grid
+                    gap: 0px 0px
+                    grid-template-columns: 1fr 1fr
+                    grid-template-rows: 1fr 1fr 1fr 1fr
+                    grid-template-areas: ". wokiImg" "wokiTitulo wokiImg" "wokiParagraph wokiImg" "wokiParagraph wokiImg"
+                &.second
+                    height: 80vh
+                    display: flex
+                    flex-direction: column
+                    gap: 0em
+                    align-items: flex-end
+                    background-image: url(../img/mesaya-funcionalidad2.svg)
+                    background-size: 65%
+                    background-repeat: no-repeat
+                    background-position-y: 70%
+                    padding: 2em 0em
+                    img
+                        display: none
+                    h3
+                        width: 40vw
+                    p
+                        width: 40vw
+                &.funcionalidadTips
+                    display: flex
+                    gap: 2em
+                    justify-content: space-around
+                    padding: 1.5em
+                    i
+                        display: none
+                    div.tip
+                        display: inline-block
+                &.backReservas
+                    background-image: url(../img/reservas-funcionalidad2.svg)
+                    background-size: 40%
+                    background-position-x: 10%
+                    img
+        section.contenedorSimple
+            border-radius: 3em
+            article
+                padding: 1em 5em
+                width: 50vw
+                gap: 1.5em
+                h3
+                    font-size: $font-sbig
+                h2
+                    font-size: $font-big
+                img
+                    display: none
+                a
+                    width: auto
+                    font-size: 1.2em
+                    padding: 0.3em 2em
+                    &:hover
+                        background: $cl-blue
+                        color: $cl-white
+        section.preguntasFrecuentes
+            background-image: url(../img/preg-frecuentes.svg)
+            background-repeat: no-repeat
+            background-size: 30%
+            background-position: 80% 50%
+            height: 55vh
+            article
+                text-align: left
+                align-items: flex-start
+                h2
+                    width: 40vw
+        section.pricing
+            height: 55vh
+            background-image: url(../img/pricing.svg)
+            background-repeat: no-repeat
+            background-size: 35%
+            background-position: 10% 40%
+            article
+                text-align: left
+                align-items: flex-start
+                width: auto
+                margin-left: 40vw
+                h2
+                    width: 30vw
+                a
+                    &:hover
+                        background: $cl-violet
+                        color: $cl-white
+        section.resto-partners
+            div
+                div
+                    article
+                        width: 250px
+                    article.partner3
+                        display: inline-block
+    footer
+        margin: 0em 0em 0em 0em
+        display: flex
+        border-radius: 3em 0 0 0
+        gap: 3em
+        flex-direction: row-reverse
+        justify-content: space-around
+        form
+            padding-top: 2em
+            div.pasos
+                display: flex
+                flex-direction: row
+                gap: 2em
+            input
+                width: 10em
+                &.send
+                    width: 21.5em
+            textarea
+                width: 21.5em
+        section.pie
+            margin-top: 1em
+
+@media screen and (min-width: 1200px)
+    main
+        section.resto-partners
+            div
+                div
+                    article
+                        width: 300px
+                        height: 350px
+                        max-height: 700px
+    footer
+        form
+            input
+                width: 15em
+                &.send
+                    width: 31.5em
+            textarea
+                width: 31.5em
+@media screen and (min-width: 1400px)
+    main
+        section.containerFuncionalidades
+            article
+                &.second
+                    gap: 3em
+                    background-position-y: 50%
