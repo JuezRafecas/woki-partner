@@ -1090,9 +1090,7 @@ footer section.pie p a:hover {
     gap: 1.5em;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 100%;
   }
   main section.contenedorSimple article h3 {
     font-size: 1.5em;
