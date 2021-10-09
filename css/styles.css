@@ -653,7 +653,7 @@ footer form article {
           justify-content: center;
 }
 
-footer form input {
+footer form input, footer form button {
   width: 90vw;
   height: 2em;
   background: #ffffff;
@@ -666,20 +666,20 @@ footer form input {
   padding: 0.5em 1em;
 }
 
-footer form input:focus {
+footer form input:focus, footer form button:focus {
   border: 1px solid #002e5d;
   -webkit-box-shadow: #002e5d 0px 2px 4px;
           box-shadow: #002e5d 0px 2px 4px;
 }
 
-footer form input.send {
+footer form input.send, footer form button.send {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
           box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
   color: #0076FF;
   font-weight: 600;
 }
 
-footer form input.send:hover {
+footer form input.send:hover, footer form button.send:hover {
   background: #002e5d;
   color: #ffffff;
   cursor: pointer;
@@ -1181,10 +1181,10 @@ footer section.pie p a:hover {
             flex-direction: row;
     gap: 2em;
   }
-  footer form input {
+  footer form input, footer form button {
     width: 10em;
   }
-  footer form input.send {
+  footer form input.send, footer form button.send {
     width: 21.5em;
     height: 3em;
   }
@@ -1203,10 +1203,10 @@ footer section.pie p a:hover {
     height: 350px;
     max-height: 700px;
   }
-  footer form input {
+  footer form input, footer form button {
     width: 15em;
   }
-  footer form input.send {
+  footer form input.send, footer form button.send {
     width: 31.5em;
   }
   footer form textarea {

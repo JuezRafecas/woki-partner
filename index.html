@@ -195,31 +195,64 @@
     </div>
     </div>
     <footer>
-        <form action="/comprar/" method="POST" id="formulario">
+        <form action="https://formsubmit.co/appeironsa@gmail.com" method="POST" id="formulario">
+            <input type="hidden" name="_subject" value="Nuevo contacto en Woki Partners">
+            <input type="hidden" name="_cc" value="gijonrafaelantonio@gmail.com">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <!-- <input type="hidden" name="_next" value="https://partners.woki.ar/thankyou.html"> -->
+            <input type="hidden" name="_autoresponse" 
+                value="Buenos Días y muchas gracias por comunicarse con Woki Partners! En breves momentos,
+                un asesor se comunicará con usted para avanazar con su consulta y comentarle todas las 
+                soluciones que Woki ofrece para su local gastronómico!">
             <div>
                 <h2>¿Querés sumarte como partner? </h2>
                 <p>Completá el formulario para ponerte en contacto.</p>
             </div>
             <div class="pasos">
                 <article>
-                    <input type="text" name="nombre" autocomplete="name" maxlength="30" minlength="1" placeholder="Nombre" required oninvalid="this.setCustomValidity('Ingrese el nombre')"
-                    oninput="this.setCustomValidity('')">
-                    <input type="text" name="apellido" autocomplete="family-name" maxlength="30" minlength="1" placeholder="Apellido" required required oninvalid="this.setCustomValidity('Ingrese el apellido')"
-                    oninput="this.setCustomValidity('')">
-                    <input type="email" name="email" autocomplete="email" maxlength="50" minlength="1" placeholder="E-mail" required required oninvalid="this.setCustomValidity('Ingrese el mail')"
-                    oninput="this.setCustomValidity('')">
+                    <input 
+                        type="text" name="nombre" 
+                        autocomplete="name" 
+                        maxlength="30" minlength="1" 
+                        placeholder="Nombre" 
+                        required oninvalid="this.setCustomValidity('Ingrese el nombre')" oninput="this.setCustomValidity('')">
+                    <input 
+                        type="text" name="apellido" 
+                        autocomplete="family-name" 
+                        maxlength="30" minlength="1" 
+                        placeholder="Apellido" 
+                        required oninvalid="this.setCustomValidity('Ingrese el apellido')" oninput="this.setCustomValidity('')">
+                    <input 
+                        type="email" name="email" 
+                        autocomplete="email" 
+                        maxlength="50" minlength="1" 
+                        placeholder="E-mail"
+                        required oninvalid="this.setCustomValidity('Ingrese el mail')" oninput="this.setCustomValidity('')">
                 </article>
                 <article>
-                    <input type="text" name="empresa" maxlength="30" minlength="1" placeholder="Nombre local" required required oninvalid="this.setCustomValidity('Ingrese el nombre de su local')"
-                    oninput="this.setCustomValidity('')"> 
-                    <input type="tel" name="telefono" autocomplete="tel" maxlength="20" minlength="1" placeholder="Teléfono" required required oninvalid="this.setCustomValidity('Ingrese el telefono')"
-                    oninput="this.setCustomValidity('')" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
-                    <input type="text" name="ciudad" maxlength="30" minlength="1" placeholder="Ciudad" required required oninvalid="this.setCustomValidity('Ingrese ciudad')"
-                    oninput="this.setCustomValidity('')">
+                    <input 
+                        type="text" name="empresa" 
+                        maxlength="30" minlength="1" 
+                        placeholder="Nombre local" 
+                        required oninvalid="this.setCustomValidity('Ingrese el nombre de su local')" oninput="this.setCustomValidity('')"> 
+                    <input 
+                        type="tel" name="telefono" 
+                        autocomplete="tel" 
+                        maxlength="20" minlength="1" 
+                        placeholder="Teléfono" 
+                        required oninvalid="this.setCustomValidity('Ingrese el telefono')" oninput="this.setCustomValidity('')" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                    <input 
+                        type="text" name="ciudad" 
+                        maxlength="30" minlength="1" 
+                        placeholder="Ciudad"
+                        required oninvalid="this.setCustomValidity('Ingrese ciudad')"oninput="this.setCustomValidity('')">
                 </article>
             </div>
-            <textarea name="mensaje" id="" cols="30" rows="10" minlength="1" maxlength="300" placeholder="Mensaje (opcional)"></textarea>
-            <input class="send" type="submit" value="Enviar">
+            <textarea 
+                name="mensaje" id="" cols="30" rows="10" minlength="1" maxlength="300" placeholder="Mensaje (opcional)">
+            </textarea>
+            <button class="send" type='submit'>Enviar</button> 
         </form>
         <section class="pie">
             <a href="#"><img src="img/logo-azulyblanco.svg" alt="Logo woki"></a>
