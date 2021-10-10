@@ -1,5 +1,3 @@
-let botonForm = document.querySelector('.send');
-botonForm.addEventListener('click', SubForm());
 function SubForm (){
     $.ajax({
         url:'https://api.apispreadsheets.com/data/19248/',
