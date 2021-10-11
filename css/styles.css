@@ -29,6 +29,20 @@
   background: #000000;
 }
 
+.scroll-down {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.scroll-up {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
   color: #0076FF;

@@ -5,21 +5,31 @@
     font-family: 'Montserrat', sans-serif
 
 ::-webkit-scrollbar 
-    width: 10px;
+    width: 10px
 
 /* Track */
 ::-webkit-scrollbar-track 
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px
  
 /* Handle */
 ::-webkit-scrollbar-thumb 
-    background: $cl-strong-blue; 
-    border-radius: 10px;
+    background: $cl-strong-blue;
+    border-radius: 10px
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover 
-    background: $cl-black; 
+    background: $cl-black
+
+.scroll-down
+    transform: translate3d(0, -100%, 0)
+    transition: all .3s
+.scroll-up 
+    transform: none;
+    transition: all .3s
+
+.scroll-up:not(.menu-open)
+
 a
     &:link,
     &:visited,
