@@ -1,4 +1,5 @@
 window.addEventListener('load', function(){
+    //Scroll del header
     const body = document.querySelector('header');
     const scrollUp = "scroll-up";
     const scrollDown = "scroll-down";
@@ -20,11 +21,59 @@ window.addEventListener('load', function(){
     }
     lastScroll = currentScroll;
     });
-    function SubForm (){
+    let botonEnviar = this.document.querySelector('.send');
+    let inputs = this.document.querySelectorAll('form input:not([type=hidden])');
+    let textArea = this.document.querySelector('form textarea');
+    let emailRegexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    inputs.forEach(item => {
+        item.addEventListener('input', function(){
+            let camposTexto = ['nombre', 'apellido', 'ciudad', 'empresa', 'telefono'];
+            if(camposTexto.includes(item.name)){
+                if(item.value.length < 3){
+                    item.classList.add('error');
+                    item.classList.remove('validated');
+                } else{
+                    item.classList.remove('error');
+                    item.classList.add('validated');
+                }
+            }
+            if(item.name == 'email'){
+                if(!emailRegexp.test(item.value)){
+                    item.classList.add('error');
+                    item.classList.remove('validated');
+                } else{
+                    item.classList.remove('error');
+                    item.classList.add('validated');
+                }
+            }
+        })
+    });
+    botonEnviar.addEventListener('click', async function(e){
+        let formulario = document.querySelector('#formulario');
+        if(formValid()){
+            await subForm();
+            formulario.submit();
+        }else{
+            e.preventDefault();
+            let inputs = document.querySelectorAll('form input:not([type=hidden])');
+            inputs.forEach(item => {
+                if(!item.classList.contains('validated')) item.classList.add('error');
+            })
+        }
+    });
+    function formValid(){
+        let inputs = Array.from(document.querySelectorAll('form input:not([type=hidden])')).filter((item) => item.classList.contains('validated')).length;
+        if(inputs>5) return true;
+        return false;
+    }
+    //Envio de formulario via API
+    async function subForm (){
+        let data = $("#formulario").serializeArray();
+        console.log(data);
         $.ajax({
             url:'https://api.apispreadsheets.com/data/19248/',
             type:'post',
-            data:$("#formulario").serializeArray(),
+            data: data,
             success: function(){
                 console.log('Datos cargados en excel');
             },
