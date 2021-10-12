@@ -279,9 +279,10 @@ section.containerFuncionalidades article img {
 
 section.containerFuncionalidades article p {
   font-weight: 300;
-  padding: 1em;
   text-align: justify;
   text-justify: inter-word;
+  line-height: 1.7em;
+  padding-top: 1em 0.3em 0em 0.3em;
 }
 
 section.containerFuncionalidades article.funcionalidadTips {
@@ -304,7 +305,6 @@ section.containerFuncionalidades article.funcionalidadTips i {
 
 section.containerFuncionalidades article.funcionalidadTips div.tip {
   display: none;
-  padding: 0.5em;
 }
 
 section.containerFuncionalidades article.funcionalidadTips div.first {
@@ -398,6 +398,7 @@ section.conclusion article h2 {
 
 section.conclusion article p {
   text-align: justify;
+  line-height: 2em;
 }
 
 section.conclusion article a {
@@ -1093,6 +1094,7 @@ footer section.pie p a:hover {
     -ms-grid-column: 1;
     grid-area: wokiParagraph;
     font-size: 1.2em;
+    padding: 1em 1em 1em 0em;
   }
   main section.containerFuncionalidades article img {
     width: 40vw;
@@ -1125,19 +1127,21 @@ footer section.pie p a:hover {
         -ms-flex-align: end;
             align-items: flex-end;
     background-image: url(../img/mesaya-funcionalidad2.svg);
-    background-size: 65%;
+    background-size: 55%;
     background-repeat: no-repeat;
     background-position-y: 70%;
-    padding: 2em 0em;
+    padding: 0.2em 0em;
   }
   main section.containerFuncionalidades article.second img {
     display: none;
   }
   main section.containerFuncionalidades article.second h3 {
     width: 40vw;
+    padding-top: 1em;
   }
   main section.containerFuncionalidades article.second p {
     width: 40vw;
+    padding-right: 1em;
     font-size: 1em;
   }
   main section.containerFuncionalidades article.funcionalidadTips {
@@ -1190,10 +1194,10 @@ footer section.pie p a:hover {
     color: #ffffff;
   }
   main section.conclusion {
-    height: 75vh;
+    height: 35em;
     background-image: url(../img/conclusion.svg);
     background-repeat: no-repeat;
-    background-size: 45%;
+    background-size: 40%;
     background-position: 10% 40%;
   }
   main section.conclusion article {
@@ -1203,9 +1207,14 @@ footer section.pie p a:hover {
             align-items: flex-start;
     width: auto;
     margin-left: 40vw;
+    padding: 1em;
   }
   main section.conclusion article h2 {
-    width: 30vw;
+    font-size: 1.5em;
+  }
+  main section.conclusion article p {
+    font-size: 1em;
+    line-height: 2em;
   }
   main section.preguntasFrecuentes {
     background-image: url(../img/preg-frecuentes.svg);
@@ -1299,8 +1308,15 @@ footer section.pie p a:hover {
     font-size: 1.2em;
   }
   main section.conclusion {
-    height: 55vh;
+    height: 35em;
     background-size: 30%;
+  }
+  main section.conclusion article h2 {
+    font-size: 2em;
+  }
+  main section.conclusion article p {
+    font-size: 1.2em;
+    line-height: 1.5em;
   }
   main section.resto-partners div div article {
     width: 300px;
