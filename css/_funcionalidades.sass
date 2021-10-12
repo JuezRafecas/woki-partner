@@ -38,22 +38,28 @@ section.containerFuncionalidades
             font-weight: 300
             text-align: justify;
             text-justify: inter-word;
-            line-height: 1.7em
+            line-height: 2em
             padding-top: 1em 0.3em 0em 0.3em
         &.funcionalidadTips
             display: flex
             align-items: center
             justify-content: space-between
-            gap: 3vw
+            gap: 3vh
             i
                 color: $cl-light-blue
                 font-size: $font-big
             div
                 &.tip
                     display: none
+                    p
+                        line-height: 1.5em
             div
                 &.first
-                    display: block
+                    display: flex
+                    flex-direction: column
+                    gap: 1em
+                    p
+                        line-height: 1.5em
                 h4
                     color: $cl-light-blue
                     font-weight: 500

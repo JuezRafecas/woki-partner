@@ -281,7 +281,7 @@ section.containerFuncionalidades article p {
   font-weight: 300;
   text-align: justify;
   text-justify: inter-word;
-  line-height: 1.7em;
+  line-height: 2em;
   padding-top: 1em 0.3em 0em 0.3em;
 }
 
@@ -295,7 +295,7 @@ section.containerFuncionalidades article.funcionalidadTips {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 3vw;
+  gap: 3vh;
 }
 
 section.containerFuncionalidades article.funcionalidadTips i {
@@ -307,8 +307,23 @@ section.containerFuncionalidades article.funcionalidadTips div.tip {
   display: none;
 }
 
+section.containerFuncionalidades article.funcionalidadTips div.tip p {
+  line-height: 1.5em;
+}
+
 section.containerFuncionalidades article.funcionalidadTips div.first {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+section.containerFuncionalidades article.funcionalidadTips div.first p {
+  line-height: 1.5em;
 }
 
 section.containerFuncionalidades article.funcionalidadTips div h4 {
@@ -399,6 +414,7 @@ section.conclusion article h2 {
 section.conclusion article p {
   text-align: justify;
   line-height: 2em;
+  font-weight: 300;
 }
 
 section.conclusion article a {
@@ -1083,18 +1099,17 @@ footer section.pie p a:hover {
   }
   main section.containerFuncionalidades article h3 {
     font-size: 2em;
-    -ms-grid-row: 2;
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: wokiTitulo;
     text-align: left;
   }
   main section.containerFuncionalidades article p {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
     -ms-grid-column: 1;
     grid-area: wokiParagraph;
     font-size: 1.2em;
-    padding: 1em 1em 1em 0em;
   }
   main section.containerFuncionalidades article img {
     width: 40vw;
@@ -1104,6 +1119,7 @@ footer section.pie p a:hover {
     grid-area: wokiImg;
   }
   main section.containerFuncionalidades article.first {
+    padding-top: 3em;
     display: -ms-grid;
     display: grid;
     gap: 0px 0px;
@@ -1111,7 +1127,10 @@ footer section.pie p a:hover {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: ". wokiImg" "wokiTitulo wokiImg" "wokiParagraph wokiImg" "wokiParagraph wokiImg";
+        grid-template-areas: "wokiTitulo wokiImg" "wokiParagraph wokiImg" "wokiParagraph wokiImg" "wokiParagraph wokiImg";
+  }
+  main section.containerFuncionalidades article.first p {
+    padding-right: 1.5em;
   }
   main section.containerFuncionalidades article.second {
     height: 80vh;
@@ -1157,7 +1176,14 @@ footer section.pie p a:hover {
     display: none;
   }
   main section.containerFuncionalidades article.funcionalidadTips div.tip {
-    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1em;
   }
   main section.containerFuncionalidades article.backReservas {
     background-image: url(../img/reservas-funcionalidad2.svg);

@@ -127,16 +127,18 @@
                 p
                     grid-area: wokiParagraph
                     font-size: 1.2em
-                    padding: 1em 1em 1em 0em 
                 img
                     width: 40vw
                     grid-area: wokiImg
                 &.first
+                    padding-top: 3em 
                     display: grid
                     gap: 0px 0px
                     grid-template-columns: 1fr 1fr
                     grid-template-rows: 1fr 1fr 1fr 1fr
-                    grid-template-areas: ". wokiImg" "wokiTitulo wokiImg" "wokiParagraph wokiImg" "wokiParagraph wokiImg"
+                    grid-template-areas: "wokiTitulo wokiImg" "wokiParagraph wokiImg" "wokiParagraph wokiImg" "wokiParagraph wokiImg"
+                    p
+                        padding-right: 1.5em
                 &.second
                     height: 80vh
                     display: flex
@@ -165,7 +167,9 @@
                     i
                         display: none
                     div.tip
-                        display: inline-block
+                        display: flex
+                        flex-direction: column
+                        gap: 1em
                 &.backReservas
                     background-image: url(../img/reservas-funcionalidad2.svg)
                     background-size: 40%
