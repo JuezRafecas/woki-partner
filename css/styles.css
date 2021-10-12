@@ -386,6 +386,31 @@ section.pricing article a {
   color: #915AFF;
 }
 
+section.conclusion {
+  padding: 1em;
+}
+
+section.conclusion article h2 {
+  color: #0076FF;
+  text-align: left;
+  font-size: 1.7em;
+}
+
+section.conclusion article p {
+  text-align: justify;
+}
+
+section.conclusion article a {
+  background: #0076FF;
+  color: #ffffff;
+}
+
+section.conclusion article a:hover {
+  background: #002e5d;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
 section.resto-partners {
   padding: 2em 0em 0em 0em;
   text-align: center;
@@ -721,8 +746,8 @@ footer form input.send:hover, footer form button.send:hover {
   cursor: pointer;
   -webkit-box-shadow: none;
           box-shadow: none;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 footer form input.error-btn:hover, footer form button.error-btn:hover {
@@ -1113,6 +1138,7 @@ footer section.pie p a:hover {
   }
   main section.containerFuncionalidades article.second p {
     width: 40vw;
+    font-size: 1em;
   }
   main section.containerFuncionalidades article.funcionalidadTips {
     display: -webkit-box;
@@ -1162,6 +1188,24 @@ footer section.pie p a:hover {
   main section.contenedorSimple article a:hover {
     background: #3653E2;
     color: #ffffff;
+  }
+  main section.conclusion {
+    height: 75vh;
+    background-image: url(../img/conclusion.svg);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: 10% 40%;
+  }
+  main section.conclusion article {
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: auto;
+    margin-left: 40vw;
+  }
+  main section.conclusion article h2 {
+    width: 30vw;
   }
   main section.preguntasFrecuentes {
     background-image: url(../img/preg-frecuentes.svg);
@@ -1251,6 +1295,13 @@ footer section.pie p a:hover {
 }
 
 @media screen and (min-width: 1200px) {
+  main section.containerFuncionalidades article.second p {
+    font-size: 1.2em;
+  }
+  main section.conclusion {
+    height: 55vh;
+    background-size: 30%;
+  }
   main section.resto-partners div div article {
     width: 300px;
     height: 350px;

@@ -153,6 +153,7 @@
                         width: 40vw
                     p
                         width: 40vw
+                        font-size: 1em
                 &.funcionalidadTips
                     display: flex
                     gap: 2em
@@ -188,6 +189,19 @@
                     &:hover
                         background: $cl-blue
                         color: $cl-white
+        section.conclusion
+            height: 75vh
+            background-image: url(../img/conclusion.svg)
+            background-repeat: no-repeat
+            background-size: 45%
+            background-position: 10% 40%
+            article
+                text-align: left
+                align-items: flex-start
+                width: auto
+                margin-left: 40vw
+                h2
+                    width: 30vw
         section.preguntasFrecuentes
             background-image: url(../img/preg-frecuentes.svg)
             background-repeat: no-repeat
@@ -249,6 +263,14 @@
 
 @media screen and (min-width: 1200px)
     main
+        section.containerFuncionalidades
+            article
+                &.second
+                    p
+                        font-size: 1.2em
+        section.conclusion
+            height: 55vh
+            background-size: 30%
         section.resto-partners
             div
                 div
