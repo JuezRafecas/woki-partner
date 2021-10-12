@@ -1036,22 +1036,23 @@ footer section.pie p a:hover {
     display: grid;
     -ms-grid-columns: (1fr)[11];
         grid-template-columns: repeat(11, 1fr);
-    -ms-grid-rows: (1fr)[11];
-        grid-template-rows: repeat(11, 1fr);
-        grid-template-areas: ". . . . . . . . . . ." ". titulo titulo titulo titulo . woki woki woki woki woki" ". titulo titulo titulo titulo . woki woki woki woki woki" ". . . . . . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". . . . . . woki woki woki woki woki" ". asesor asesor asesor asesor . woki woki woki woki woki" ". . . . . . . . . . ." ". . . . . . . . . . .";
+    -ms-grid-rows: (1fr)[6];
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: ". titulo titulo titulo titulo . woki woki woki woki woki" ". titulo titulo titulo titulo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". asesor asesor asesor asesor . woki woki woki woki woki";
   }
   section.hero h1 {
+    padding-top: 1em;
     font-size: 2.5em;
     text-align: left;
-    -ms-grid-row: 2;
+    -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 2;
     -ms-grid-column-span: 4;
     grid-area: titulo;
   }
   section.hero img {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 8;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 6;
     -ms-grid-column: 7;
     -ms-grid-column-span: 5;
     grid-area: woki;
@@ -1062,19 +1063,21 @@ footer section.pie p a:hover {
         justify-self: center;
   }
   section.hero p {
+    padding-top: 3em;
     text-align: left;
-    -ms-grid-row: 5;
+    -ms-grid-row: 3;
     -ms-grid-row-span: 3;
     -ms-grid-column: 2;
     -ms-grid-column-span: 4;
     grid-area: parrafo;
+    line-height: 2em;
   }
   section.hero a {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     width: 15em;
-    -ms-grid-row: 9;
+    -ms-grid-row: 6;
     -ms-grid-column: 2;
     -ms-grid-column-span: 4;
     grid-area: asesor;

@@ -89,9 +89,10 @@
         background-size: cover
         display: grid;
         grid-template-columns: repeat(11, 1fr) 
-        grid-template-rows: repeat(11, 1fr)
-        grid-template-areas: ". . . . . . . . . . ." ". titulo titulo titulo titulo . woki woki woki woki woki" ". titulo titulo titulo titulo . woki woki woki woki woki" ". . . . . . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". . . . . . woki woki woki woki woki" ". asesor asesor asesor asesor . woki woki woki woki woki" ". . . . . . . . . . ." ". . . . . . . . . . ."  
+        grid-template-rows: repeat(6, 1fr)
+        grid-template-areas: ". titulo titulo titulo titulo . woki woki woki woki woki" ". titulo titulo titulo titulo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". asesor asesor asesor asesor . woki woki woki woki woki"  
         h1
+            padding-top: 1em
             font-size: $font-big + 0.5em
             text-align: left
             grid-area: titulo
@@ -100,8 +101,10 @@
             align-self: center
             justify-self: center
         p
+            padding-top: 3em
             text-align: left
             grid-area: parrafo
+            line-height: 2em
         a
             align-self: center
             width: 15em
