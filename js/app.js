@@ -1,4 +1,18 @@
 window.addEventListener('load', function(){
+    //Funcionalidad menu hamburguesa
+    document.querySelector('#toggle').addEventListener('click',function() {
+        this.classList.toggle('active');
+        let overlay = document.querySelector('#overlay');
+        overlay.classList.toggle('open');
+    });
+    this.document.querySelector('.funcionalidades-mobile').addEventListener('click', function(){
+        document.querySelector('#toggle').classList.remove('active');
+        document.querySelector('#overlay').classList.remove('open');
+    });
+    this.document.querySelector('.register-mobile').addEventListener('click', function(){
+        document.querySelector('#toggle').classList.remove('active');
+        document.querySelector('#overlay').classList.remove('open');
+    });
     //Scroll del header
     const body = document.querySelector('header');
     const scrollUp = "scroll-up";
@@ -21,9 +35,11 @@ window.addEventListener('load', function(){
     }
     lastScroll = currentScroll;
     });
+
+
+    //Validacion de formulario
     let botonEnviar = this.document.querySelector('.send');
     let inputs = this.document.querySelectorAll('form input:not([type=hidden])');
-    let textArea = this.document.querySelector('form textarea');
     let emailRegexp = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     inputs.forEach(item => {
         item.addEventListener('input', function(){

@@ -16,18 +16,136 @@
         padding: 0
         margin: auto 0.2em
         border-radius: 1em
+        z-index: 101
         nav
             flex-direction: row
             justify-content: space-between
             padding: 0.5em
             ul
-                i.fa-bars
+                li button
                     display: inline-block
                     font-weight: 900
                     font-size: $font-big
                     color: $cl-light-blue
                 li
                     display: none
+    .overlay
+        display: block
+        a
+            display: inline-block
+            position: relative
+            text-align: center
+            text-decoration: none
+            font-size: 20px
+            overflow: hidden
+            top: 5px
+    li.burger
+        display: block
+    .button_container
+        position: fixed
+        top: 0.6em
+        right: 5%
+        height: 35px
+        width: 35px
+        cursor: pointer
+        transition: opacity .25s ease
+        border: none
+        background: #ffffff
+        &:hover
+            opacity: .7
+        &.active
+            .top
+                transform: translateY(11px) translateX(0) rotate(45deg)
+                background: $cl-light-blue
+            .middle
+                opacity: 0
+                background: $cl-light-blue
+            .bottom
+                transform: translateY(-11px) translateX(0) rotate(-45deg)
+                background: $cl-light-blue
+        span
+            background: $cl-light-blue
+            border: none
+            height: 5px
+            width: 100%
+            position: absolute
+            top: 0
+            left: 0
+            transition: all .35s ease
+            cursor: pointer
+            &:nth-of-type(2)
+                top: 11px
+            &:nth-of-type(3)
+                top: 22px
+    .overlay
+        position: fixed
+        background: $cl-white
+        top: 0
+        left: 0
+        width: 100%
+        height: 0%
+        opacity: 0
+        visibility: hidden
+        transition: opacity .35s, visibility .35s, height .35s
+        overflow: hidden
+        z-index: 100
+        &.open
+            opacity: .9
+            visibility: visible
+            height: 100%
+            li
+                animation: fadeInRight .5s ease forwards
+                animation-delay: .35s
+                &:nth-of-type(2)
+                    animation-delay: .4s
+                &:nth-of-type(3)
+                    animation-delay: .45s
+                &:nth-of-type(4)
+                    animation-delay: .50s
+        nav
+            position: relative
+            height: 70%
+            top: 50%
+            transform: translateY(-50%)
+            font-size: 50px
+            font-weight: 400
+            text-align: center
+            ul
+                list-style: none
+                padding: 0
+                margin: 0 auto
+                display: inline-block
+                position: relative
+                height: 100%
+                li
+                    display: block
+                    height: 25%
+                    height: calc(100% / 4)
+                    min-height: 50px
+                    position: relative
+                    opacity: 0
+                    &.register-mobile
+                        a
+                            background: $cl-strong-blue
+                            color: $cl-white
+                            border-radius: 1em
+                    a
+                        display: block
+                        position: relative
+                        color: $cl-light-blue
+                        text-decoration: none
+                        overflow: hidden
+                        font-size: 0.65em
+
+@keyframes fadeInRight
+    0%
+        opacity: 0
+        left: 20%
+
+    100%
+        opacity: 1
+        left: 0
+
 //Medias para el header con max-width
 @media screen and (max-width: 320px)
     section.hero
@@ -72,10 +190,10 @@
                 font-size: $font-ebig
             h5
                 font-size: 1.3em
-            display: flex
-            flex-direction: column
-            align-items: flex-start
-            gap: 1em
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                gap: 1em
             div
                 flex-direction: row
                 img
@@ -87,10 +205,10 @@
         background-image: url(../img/hero-background-cpu.svg)
         background-position: 35% 65%
         background-size: cover
-        display: grid;
-        grid-template-columns: repeat(11, 1fr) 
+        display: grid
+        grid-template-columns: repeat(11, 1fr)
         grid-template-rows: repeat(6, 1fr)
-        grid-template-areas: ". titulo titulo titulo titulo . woki woki woki woki woki" ". titulo titulo titulo titulo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". asesor asesor asesor asesor . woki woki woki woki woki"  
+        grid-template-areas: ".titulo titulo titulo titulo .woki woki woki woki woki" ".titulo titulo titulo titulo .woki woki woki woki woki" ".parrafo parrafo parrafo parrafo .woki woki woki woki woki" ".parrafo parrafo parrafo parrafo .woki woki woki woki woki" ".parrafo parrafo parrafo parrafo .woki woki woki woki woki" ".asesor asesor asesor asesor .woki woki woki woki woki"
         h1
             padding-top: 1em
             font-size: $font-big + 0.5em
@@ -134,7 +252,7 @@
                     width: 40vw
                     grid-area: wokiImg
                 &.first
-                    padding-top: 3em 
+                    padding-top: 3em
                     display: grid
                     gap: 0px 0px
                     grid-template-columns: 1fr 1fr
@@ -210,7 +328,7 @@
                 align-items: flex-start
                 width: auto
                 margin-left: 40vw
-                padding: 1em 
+                padding: 1em
                 h2
                     font-size: 1.5em
                 p

@@ -76,10 +76,6 @@ div.mainFooter {
   display: none;
 }
 
-div.encabezado {
-  height: 1.25rem;
-}
-
 header {
   background-color: #ffffff;
   border-radius: 15em;
@@ -128,10 +124,6 @@ header nav ul {
   margin-right: 1.5em;
 }
 
-header nav ul i.fa-bars {
-  display: none;
-}
-
 header nav ul li:hover {
   cursor: pointer;
 }
@@ -171,6 +163,14 @@ header nav ul li.register:hover {
 
 header nav ul li.register a {
   color: #ffffff;
+}
+
+header nav ul li button {
+  display: none;
+}
+
+.overlay {
+  display: none;
 }
 
 section.hero {
@@ -912,6 +912,7 @@ footer section.pie p a:hover {
     padding: 0;
     margin: auto 0.2em;
     border-radius: 1em;
+    z-index: 101;
   }
   header nav {
     -webkit-box-orient: horizontal;
@@ -923,7 +924,7 @@ footer section.pie p a:hover {
             justify-content: space-between;
     padding: 0.5em;
   }
-  header nav ul i.fa-bars {
+  header nav ul li button {
     display: inline-block;
     font-weight: 900;
     font-size: 2em;
@@ -931,6 +932,166 @@ footer section.pie p a:hover {
   }
   header nav ul li {
     display: none;
+  }
+  .overlay {
+    display: block;
+  }
+  .overlay a {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    top: 5px;
+  }
+  li.burger {
+    display: block;
+  }
+  .button_container {
+    position: fixed;
+    top: 0.6em;
+    right: 5%;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    -webkit-transition: opacity .25s ease;
+    transition: opacity .25s ease;
+    border: none;
+    background: #ffffff;
+  }
+  .button_container:hover {
+    opacity: .7;
+  }
+  .button_container.active .top {
+    -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+            transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #0076FF;
+  }
+  .button_container.active .middle {
+    opacity: 0;
+    background: #0076FF;
+  }
+  .button_container.active .bottom {
+    -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+            transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #0076FF;
+  }
+  .button_container span {
+    background: #0076FF;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    cursor: pointer;
+  }
+  .button_container span:nth-of-type(2) {
+    top: 11px;
+  }
+  .button_container span:nth-of-type(3) {
+    top: 22px;
+  }
+  .overlay {
+    position: fixed;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .35s, visibility .35s, height .35s;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    z-index: 100;
+  }
+  .overlay.open {
+    opacity: .9;
+    visibility: visible;
+    height: 100%;
+  }
+  .overlay.open li {
+    -webkit-animation: fadeInRight .5s ease forwards;
+            animation: fadeInRight .5s ease forwards;
+    -webkit-animation-delay: .35s;
+            animation-delay: .35s;
+  }
+  .overlay.open li:nth-of-type(2) {
+    -webkit-animation-delay: .4s;
+            animation-delay: .4s;
+  }
+  .overlay.open li:nth-of-type(3) {
+    -webkit-animation-delay: .45s;
+            animation-delay: .45s;
+  }
+  .overlay.open li:nth-of-type(4) {
+    -webkit-animation-delay: .50s;
+            animation-delay: .50s;
+  }
+  .overlay nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .overlay nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+  }
+  .overlay nav ul li {
+    display: block;
+    height: 25%;
+    height: calc(100% / 4);
+    min-height: 50px;
+    position: relative;
+    opacity: 0;
+  }
+  .overlay nav ul li.register-mobile a {
+    background: #002e5d;
+    color: #ffffff;
+    border-radius: 1em;
+  }
+  .overlay nav ul li a {
+    display: block;
+    position: relative;
+    color: #0076FF;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 0.65em;
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
   }
 }
 
@@ -989,7 +1150,16 @@ footer section.pie p a:hover {
   section.contrata-woki div.contrata-titulo {
     display: none;
   }
-  section.contrata-woki div.contrata-texto {
+  section.contrata-woki div.contrata-texto h4 {
+    display: block;
+    font-size: 2em;
+  }
+  section.contrata-woki div.contrata-texto h3 {
+    display: block;
+    font-size: 3em;
+  }
+  section.contrata-woki div.contrata-texto h5 {
+    font-size: 1.3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1001,17 +1171,6 @@ footer section.pie p a:hover {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 1em;
-  }
-  section.contrata-woki div.contrata-texto h4 {
-    display: block;
-    font-size: 2em;
-  }
-  section.contrata-woki div.contrata-texto h3 {
-    display: block;
-    font-size: 3em;
-  }
-  section.contrata-woki div.contrata-texto h5 {
-    font-size: 1.3em;
   }
   section.contrata-woki div.contrata-texto div {
     -webkit-box-orient: horizontal;
@@ -1038,7 +1197,7 @@ footer section.pie p a:hover {
         grid-template-columns: repeat(11, 1fr);
     -ms-grid-rows: (1fr)[6];
         grid-template-rows: repeat(6, 1fr);
-        grid-template-areas: ". titulo titulo titulo titulo . woki woki woki woki woki" ". titulo titulo titulo titulo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". parrafo parrafo parrafo parrafo . woki woki woki woki woki" ". asesor asesor asesor asesor . woki woki woki woki woki";
+        grid-template-areas: ".titulo titulo titulo titulo .woki woki woki woki woki" ".titulo titulo titulo titulo .woki woki woki woki woki" ".parrafo parrafo parrafo parrafo .woki woki woki woki woki" ".parrafo parrafo parrafo parrafo .woki woki woki woki woki" ".parrafo parrafo parrafo parrafo .woki woki woki woki woki" ".asesor asesor asesor asesor .woki woki woki woki woki";
   }
   section.hero h1 {
     padding-top: 1em;
@@ -1047,14 +1206,14 @@ footer section.pie p a:hover {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 3;
     grid-area: titulo;
   }
   section.hero img {
     -ms-grid-row: 1;
     -ms-grid-row-span: 6;
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 5;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 4;
     grid-area: woki;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -1068,7 +1227,7 @@ footer section.pie p a:hover {
     -ms-grid-row: 3;
     -ms-grid-row-span: 3;
     -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 3;
     grid-area: parrafo;
     line-height: 2em;
   }
@@ -1079,7 +1238,7 @@ footer section.pie p a:hover {
     width: 15em;
     -ms-grid-row: 6;
     -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 3;
     grid-area: asesor;
   }
   main {
